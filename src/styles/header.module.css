@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+
+}
+
+.threeLines {
+    height: 25px; 
+    margin-top: 10px;
+}
+
+.logo {
+    height: 45px; 
+}
+
+.button {
+    height: 45px; 
+    width: 100px;
+    border-radius: 25px;
+    margin-left: 20px; 
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.leftArrow {
+    height: 25px;
+    margin-top: 20px;
+    margin-left: 40px;
+
+}
+.rightArrow {
+    height: 45px;
+    margin-top: 10px;
+}
