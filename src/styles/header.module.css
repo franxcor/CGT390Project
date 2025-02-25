@@ -1,35 +1,152 @@
 .container {
+    margin: none;
     display: flex;
+    max-width: 3500px;
+    overflow: auto;
 
+}
+.leftSection {
+    display: flex;
+    justify-content: left;
+}
+.break {
+    width: 400px;
+}
+.rightSection {
+    display: flex;
+    justify-content: right;
 }
 
 .threeLines {
-    height: 25px; 
-    margin-top: 10px;
+    height: 20px; 
+    margin-top: 25px;
+    margin-left: 23px;
 }
 
 .logo {
-    height: 45px; 
+    height: 35px; 
+    margin-top: 17px;
+    margin-left: 10px;
 }
 
-.button {
-    height: 45px; 
-    width: 100px;
+.calText {
+    margin-top: 20px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+}
+
+.todayButton {
+    height: 40px; 
+    width: 85px;
     border-radius: 25px;
+    margin-left: 50px; 
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.leftArrow {
+    height: 18px;
+    margin-top: 28px;
+    margin-left: 35px;
+
+}
+.rightArrow {
+    margin-left: 2px;
+    height: 33px;
+    margin-top: 20.5px;
+}
+
+.monthButton {
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: 300;
+    font-size: 19pt;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 17px;
+}
+
+.downArrow {
+    margin-top: 15px;
+    height: 10px;
+}
+.downArrow2 {
+    height: 10px;
+}
+
+.magGlass {
+    height: 18px;
+    margin-top: 26px;
+    margin-left: 50px;
+}
+.settings {
+    height: 35px;
+    margin-top: 17px;
+    margin-left: 12px;
+}
+.question {
+    height: 20px;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.weekButton {
+    height: 40px; 
+    width: 85px;
+    border-radius: 25px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.calVersion {
+    height:40px; 
+    width: 45px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
     margin-left: 20px; 
     border: 1px solid black;
     color: black;
     background-color: white;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-weight: bold;
 }
-
-.leftArrow {
-    height: 25px;
-    margin-top: 20px;
-    margin-left: 40px;
-
+.calendar {
+    height: 35px;
 }
-.rightArrow {
-    height: 45px;
-    margin-top: 10px;
+.taskVersion {
+    height: 40px; 
+    width: 45px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: 1px solid black;
+    border-left: none;
+    color: black;
+    background-color: white;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.tasks {
+    height: 20px;
+    margin-left: -5px;
+}
+.dots {
+    background-color: white;
+    border: none;
+    margin-left: 20px;
+}
+.dotsImg {
+    height: 20px;
+}
+.profile {
+    background-color: white;
+    border: none;
+    margin-left: 10px;
+}
+.profileImg {
+    height: 30px;
 }
