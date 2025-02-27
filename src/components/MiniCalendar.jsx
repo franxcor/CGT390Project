@@ -1,12 +1,27 @@
+import {useEffect, useState} from 'react';
+
 import styles from '../styles/miniCalendar.module.css'
 import leftArrow from '../assets/chevron-left-arrow.svg'
 import rightArrow from '../assets/chevron-right-arrow.svg'
 
+import Datetime from 'react-datetime'; 
+
 const MiniCalendar = () => {
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const [date, setDate] = useState(0);
+    const [month, setMonth] = useState("");
+    const [year, setYear] = useState(0)
+    useEffect(() => {
+        let newDate = new Date();
+        setDate(newDate.getDate());
+        setMonth(monthNames[newDate.getMonth() + 1]);
+        setYear(newDate.getFullYear());
+        console.log(date, month, year);
+    }, [])
     return (
         <div className={styles["container"]}>
             <div className={styles["header"]}>
-                <h3 className={styles["month"]}>March 2025</h3>
+                <h3 className={styles["month"]}>{month} {year}</h3>
                 <img src={leftArrow} className={styles["left"]}/>
                 <img src={rightArrow} className={styles["right"]}/>
             </div>

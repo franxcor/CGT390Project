@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "react": "^19.0.0",
+    "react-datetime": "^3.3.1",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
