@@ -1,0 +1,28 @@
+.container {
+    width: 500px;
+    height: 2000px;
+}
+.createButton {
+    width: 130px;
+    height: 55px;
+    font-size: 11pt;
+    font-weight: 500;
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+    border: 0px;
+    box-shadow: 0px 1px 3px grey;
+    padding-left: 30px;
+    align-content: center;
+    align-items: center;
+}
+.createButtonPlus {
+    height: 30px;
+    margin-left: -35px;
+    margin-top: -8px;
+    position: absolute;
+}
+.createButtonDown {
+    height: 10px;
+    margin-left: 10px;
+}

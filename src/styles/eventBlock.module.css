@@ -1,0 +1,33 @@
+.container {
+    border-radius: 10px;
+    width: 70px;
+    background-color:orchid;
+    padding: 5px;
+}
+.title {
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    font-stretch: condensed;
+    max-width: 75px;
+    /*so the text doesn't break */
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    margin: 0px;
+    padding: 0px;
+}
+.times {
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 10pt;
+    font-stretch: condensed;
+    max-width: 75px;
+    /*so the text doesn't break */
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    margin: 0px;
+    padding:0px;
+}

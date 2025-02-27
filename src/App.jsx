@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './components/Header.jsx';
+import EventBlock from './components/EventBlock.jsx';
+import LeftDiv from './components/leftDiv.jsx';
 
 function App() {
 
@@ -9,13 +11,9 @@ function App() {
       <div>
         <Header></Header>
       </div>
+      <LeftDiv></LeftDiv>
       <h1>Corbishley Project 1</h1>
-      <div className="card">
-        
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <EventBlock length={'150px'} title={"Example Event 1"} startTime={"3:30pm"} endTime={"5:30pm"}></EventBlock>
     </>
   )
 }

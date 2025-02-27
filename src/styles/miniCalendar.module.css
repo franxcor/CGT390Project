@@ -1,0 +1,27 @@
+.container {
+    background-color: lightblue;
+}
+.header {
+    display: flex;
+    font-size: 11pt;
+    padding: 0px;
+}
+.month {
+    font-family: "Roboto", sans-serif;
+}
+.left {
+    height: 13px; 
+    margin-top: 22px;
+    margin-left: 60px;
+}
+.right {
+    height: 25px;
+    margin-top: 16px;
+    margin-left: 5px;
+}
+.days {
+    font-family: "Roboto", sans-serif;
+}
+.dow {
+    font-size: 10pt;
+}
