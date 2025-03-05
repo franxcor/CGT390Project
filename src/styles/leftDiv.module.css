@@ -1,6 +1,8 @@
 .container {
-    width: 500px;
-    height: 2000px;
+    width: 270px;
+    height: 90vh;
+    padding-left: 20px;
+    background-color: yellow;
 }
 .createButton {
     width: 130px;

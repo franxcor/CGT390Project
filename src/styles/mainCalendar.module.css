@@ -13,13 +13,45 @@
     text-align: center;
     padding: 10px;
     padding-top: 0px;
-    margin-left: 50px;
+    margin-left: 120px;
     font-weight:100;
+    padding-bottom: 40px;
 }
-.daySpace {
-    width: 100px;
-    font-size: 65pt;
+.weekDay {
+    font-size: 9pt;
+    font-weight: normal;
+    margin-bottom : 5px;
+    padding-bottom: 0px;
 }
-.numberDays {
+.numDay {
     font-size: 20pt;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+}
+
+.body {
+    display: flex;
+}
+
+.timeZone {
+    position: absolute;
+    margin-top: -20px;
+    font-size: 10pt;
+}
+
+.times {
+    font-size: 9pt;
+    width: 120px;
+}
+.hourBlock {
+    border-bottom: .5px solid grey;
+    border-left: .5px solid grey;
+    width: 900px;
+    height: 35px;
+    margin: 0px;
+}
+.blockRow {
+    margin: 0px;
+    padding: 0px;
 }

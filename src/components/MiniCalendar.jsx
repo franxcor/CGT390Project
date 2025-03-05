@@ -17,6 +17,7 @@ const MiniCalendar = () => {
         setMonth(monthNames[newDate.getMonth()]);
         setYear(newDate.getFullYear());
     }, [])
+    
     return (
         <div className={styles["container"]}>
             <div className={styles["header"]}>

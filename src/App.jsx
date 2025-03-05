@@ -18,9 +18,6 @@ function App() {
         <MainCalendar></MainCalendar>
         <RightDiv></RightDiv>
       </div>
-      
-      <h1>Corbishley Project 1</h1>
-      <EventBlock length={'150px'} title={"Example Event 1"} startTime={"3:30pm"} endTime={"5:30pm"}></EventBlock>
     </>
   )
 }
