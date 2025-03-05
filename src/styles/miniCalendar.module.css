@@ -1,5 +1,7 @@
 .container {
     background-color: lightblue;
+    width: 200px;
+    margin-left: 20px;
 }
 .header {
     display: flex;

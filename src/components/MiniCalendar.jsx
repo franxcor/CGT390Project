@@ -14,9 +14,8 @@ const MiniCalendar = () => {
     useEffect(() => {
         let newDate = new Date();
         setDate(newDate.getDate());
-        setMonth(monthNames[newDate.getMonth() + 1]);
+        setMonth(monthNames[newDate.getMonth()]);
         setYear(newDate.getFullYear());
-        console.log(date, month, year);
     }, [])
     return (
         <div className={styles["container"]}>

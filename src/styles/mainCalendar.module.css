@@ -1,0 +1,25 @@
+.content {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    width: 1200px;
+    padding-top: 0px;
+}
+
+.header {
+    display: flex;
+}
+.day {
+    text-align: center;
+    padding: 10px;
+    padding-top: 0px;
+    margin-left: 50px;
+    font-weight:100;
+}
+.daySpace {
+    width: 100px;
+    font-size: 65pt;
+}
+.numberDays {
+    font-size: 20pt;
+}
