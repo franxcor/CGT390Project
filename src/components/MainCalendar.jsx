@@ -1,7 +1,6 @@
 import styles from '../styles/mainCalendar.module.css';
-
-
 import EventBlock from './EventBlock';
+import AddEvent from './AddEvent';
 
 const MainCalendar = () => {
     return (

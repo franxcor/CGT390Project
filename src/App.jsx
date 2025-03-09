@@ -5,6 +5,7 @@ import EventBlock from './components/EventBlock.jsx';
 import LeftDiv from './components/leftDiv.jsx';
 import MainCalendar from './components/mainCalendar.jsx';
 import RightDiv from './components/RightDiv.jsx'
+import AddEvent from './components/AddEvent.jsx';
 
 function App() {
 

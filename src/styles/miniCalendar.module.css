@@ -1,6 +1,7 @@
 .container {
-    background-color: lightblue;
-    width: 200px;
+    background-color: #f8fafd;
+    width: 250px;
+    height: 300px;
 }
 .header {
     display: flex;
@@ -31,7 +32,22 @@
     font-size: 8pt;
     
 }
+.calendarContent {
+    width: 240px;
+    text-align: center;
+    height: 180px;
+}
+.calenderDayNames {
+    text-align: center;
+    margin-top: 2px;
+}
+.calendarDayNums {
+    margin-top: 2px;
+}
 .dow {
     font-size: 8pt;
     margin: 0px;
+    margin-left: 12px;
+    margin-top: 5px;
+    text-align: center;
 }
