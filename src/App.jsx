@@ -6,20 +6,24 @@ import LeftDiv from './components/leftDiv.jsx';
 import MainCalendar from './components/mainCalendar.jsx';
 import RightDiv from './components/RightDiv.jsx'
 import AddEvent from './components/AddEvent.jsx';
+import { MonthProvider } from './contexts/MonthContext.jsx';
+import { SelectedProvider } from './contexts/SelectedContext.jsx';
 
 function App() {
 
   return (
-    <>
-      <div>
-        <Header></Header>
-      </div>
-      <div className="content">
-        <LeftDiv></LeftDiv>
-        <MainCalendar></MainCalendar>
-        <RightDiv></RightDiv>
-      </div>
-    </>
+    <MonthProvider>
+      <SelectedProvider>
+        <div>
+          <Header></Header>
+        </div>
+        <div className="content">
+          <LeftDiv></LeftDiv>
+          <MainCalendar></MainCalendar>
+          <RightDiv></RightDiv>
+        </div>
+      </SelectedProvider>
+    </MonthProvider>
   )
 }
 

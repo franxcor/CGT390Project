@@ -1,22 +1,17 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useContext} from 'react';
 
 import styles from '../styles/miniCalendar.module.css'
 import leftArrow from '../assets/chevron-left-arrow.svg'
 import rightArrow from '../assets/chevron-right-arrow.svg'
 
-import Datetime from 'react-datetime'; 
+import { MonthContext } from '../contexts/MonthContext';
+import { SelectedContext } from '../contexts/SelectedContext';
 
 const MiniCalendar = () => {
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const [date, setDate] = useState(0);
-    const [month, setMonth] = useState("");
-    const [year, setYear] = useState(0)
-    useEffect(() => {
-        let newDate = new Date();
-        setDate(newDate.getDate());
-        setMonth(monthNames[newDate.getMonth()]);
-        setYear(newDate.getFullYear());
-    }, [])
+    const {startDate} = useContext(SelectedContext);
+    const {date} = useContext(MonthContext);
+    const {month} =useContext(MonthContext);
+    const {year} = useContext(MonthContext);
     
     return (
         <div className={styles["container"]}>

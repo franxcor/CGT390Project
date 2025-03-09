@@ -1,38 +1,44 @@
+import {useContext} from 'react'
+
 import styles from '../styles/mainCalendar.module.css';
 import EventBlock from './EventBlock';
 import AddEvent from './AddEvent';
 
+import { SelectedContext } from '../contexts/SelectedContext.jsx';
+
 const MainCalendar = () => {
+    const {startDate} = useContext(SelectedContext);
+
     return (
         <div className={styles.content}>
             <div className = {styles.header}>
                 <div className = {styles.day}  style={{marginLeft: '80px'}}>
                     <h5 className = {styles.weekDay} >SUN</h5>
-                    <h3 className = {styles.numDay}> 1 </h3>
+                    <h3 className = {styles.numDay}> {startDate}</h3>
                 </div>
                 <div className = {styles.day}>
                     <h5 className = {styles.weekDay}>MON</h5>
-                    <h3 className = {styles.numDay}> 2 </h3>
+                    <h3 className = {styles.numDay}> {startDate + 1} </h3>
                 </div>
                 <div className = {styles.day}>
                     <h5 className = {styles.weekDay}>TUE</h5>
-                    <h3 className = {styles.numDay}> 1 </h3>
+                    <h3 className = {styles.numDay}> {startDate + 2} </h3>
                 </div>
                 <div className = {styles.day}>
                     <h5 className = {styles.weekDay}>WED</h5>
-                    <h3 className = {styles.numDay}> 1 </h3>
+                    <h3 className = {styles.numDay}> {startDate + 3} </h3>
                 </div>
                 <div className = {styles.day}>
                     <h5 className = {styles.weekDay}>THU</h5>
-                    <h3 className = {styles.numDay}> 1 </h3>
+                    <h3 className = {styles.numDay}> {startDate + 4} </h3>
                 </div>
                 <div className = {styles.day}>
                     <h5 className = {styles.weekDay}>FRI</h5>
-                    <h3 className = {styles.numDay}> 1 </h3>
+                    <h3 className = {styles.numDay}> {startDate + 5} </h3>
                 </div>
                 <div className = {styles.day}>
                     <h5 className = {styles.weekDay}>SAT</h5>
-                    <h3 className = {styles.numDay}> 1 </h3>
+                    <h3 className = {styles.numDay}> {startDate + 6} </h3>
                 </div>
             </div>
             <div className={styles.body}>

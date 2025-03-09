@@ -15,7 +15,12 @@ import tasks from '../assets/tasks.svg';
 import dots from '../assets/dots.webp';
 import profile from '../assets/profile.png';
 
+import { MonthContext } from '../contexts/MonthContext';
+import { useContext } from 'react';
 const Header = () => {
+
+    const {month} = useContext(MonthContext);
+    const {year} = useContext(MonthContext);
     return (
         <div className={styles["container"]}>
             <div className={styles["leftSection"]}>
@@ -25,7 +30,7 @@ const Header = () => {
                 <button className={styles["todayButton"]}> Today </button>
                 <img src={LeftArrow}  className={styles["leftArrow"]}/>
                 <img src={RightArrow} className={styles["rightArrow"]}/>
-                <button className={styles["monthButton"]}> February 2025 <img src={downArrow} className={styles["downArrow"]} /> </button> {/* need to make this an imported value */}
+                <button className={styles["monthButton"]}> {month} {year} <img src={downArrow} className={styles["downArrow"]} /> </button> {/* need to make this an imported value */}
             </div>
             <div className={styles["break"]}>
 
