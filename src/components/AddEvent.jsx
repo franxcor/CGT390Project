@@ -10,10 +10,8 @@ const AddEvent = () => {
     return (
         <div className={style["container"]}>
             <div className={style["header"]}>
-                
                 <input type="text" placeholder="Add title" className={style["addEvent"]}/>
                 <p>x</p>
-                
             </div>
             <p>Event</p>
             <div className={style["bodySection"]}>
@@ -39,10 +37,7 @@ const AddEvent = () => {
             <div className={style["bodySection"]}>
                 <img src={calendar} className={style["calendar"]} />
                 <p>Francesca Corbishley</p>
-            </div>
-            
-            
-            
+            </div>           
             <a><p>More options</p></a>
             <button>Save</button>
 

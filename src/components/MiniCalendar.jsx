@@ -52,7 +52,7 @@ const MiniCalendar = () => {
                         <tr>
                             <td></td>
                             {monthStart === 1 ? <td >1</td> : <td> </td>}
-                            {monthStart === 2 ? <td>1</td> : <td> </td>}
+                            {monthStart === 2 ? <td>1</td> : monthStart === 1 ? <td>2</td>: <td> </td>}
                             {monthStart === 3 ? <td>1</td> : <td> </td>}
                             {monthStart === 4 ? <td>1</td> : <td> </td>}
                             {monthStart === 5 ? <td>1</td> : <td> </td>}
