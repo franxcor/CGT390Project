@@ -17,27 +17,32 @@ import profile from '../assets/profile.png';
 
 import { MonthContext } from '../contexts/MonthContext';
 import { useContext, useState } from 'react';
+import { OffSetContext } from '../contexts/OffSetContext';
 const Header = () => {
 
     const {month} = useContext(MonthContext);
     const {year} = useContext(MonthContext);
-    const [offset, setOffset] = useState(0);
+    const {offSet, setOffSet} = useContext(OffSetContext);
 
     const calcOffSet = (direction) => {
         console.log("pressed")
-        if (direction = "prev") {
-            setOffset(offset -7)
-        } else if (direction = "next") {
-            setOffset(offset + 7)
+        if (direction === "prev") {
+            setOffSet(offSet -7)
+        } else if (direction === "next") {
+            setOffSet(offSet + 7)
         }
     }
+    const resetDate = () => {
+        setOffSet(0);
+    }
+
     return (
         <div className={styles["container"]}>
             <div className={styles["leftSection"]}>
                 <img src={threeLines} className={styles["threeLines"]} />
                 <img src={Logo} className={styles["logo"]} />
                 <h3 className={styles["calText"]}> Calendar </h3>
-                <button className={styles["todayButton"]}> Today </button>
+                <button className={styles["todayButton"]} onClick = {() => resetDate()}> Today </button>
                 <button onClick={() => calcOffSet("prev")} className={styles["arrowButtons"]}><img src={LeftArrow}  className={styles["leftArrow"]} /></button>
                 <button onClick={() => calcOffSet("next")} className={styles["arrowButtons"]}> <img src={RightArrow} className={styles["rightArrow"]} /> </button>
                 <button className={styles["monthButton"]}> {month} {year} <img src={downArrow} className={styles["downArrow"]} /> </button> {/* need to make this an imported value */}
@@ -59,4 +64,3 @@ const Header = () => {
     )
 }
 export default Header;
-export offset;

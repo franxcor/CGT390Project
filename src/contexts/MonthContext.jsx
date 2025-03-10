@@ -1,6 +1,7 @@
-import {createContext, useState, useEffect} from 'react';
+import {createContext, useState, useEffect, useContext} from 'react';
 
-import Datetime from 'react-datetime'; 
+import Datetime from 'react-datetime';
+import { OffSetContext } from './OffSetContext';
     
 export const MonthContext = createContext();
 
@@ -12,9 +13,11 @@ export const MonthProvider = ({children}) => {
     const [year, setYear] = useState(0);
     const [dayNum, setDayNum] = useState(0);
     const [day, setDay] = useState("");
-
-    const [monthStart, setMonthStart] = useState(-1);
     const [offset, setOffset] = useState(0);
+
+    const [miniMonth, setMiniMonth] = useState("");
+    const [monthStart, setMonthStart] = useState(-1);
+    const {miniOffSet, setMiniOffSet} = useContext(OffSetContext);
 
     useEffect(() => {
         let newDate = new Date();
@@ -25,9 +28,15 @@ export const MonthProvider = ({children}) => {
         setDay(weekNames[newDate.getDay() - 1]);
     }, []);
 
+
+    useEffect (() => {
+        let newDate = new Date();
+            setMiniMonth(monthNames[newDate.getMonth() + miniOffSet])
+    })
+
     useEffect(() => {
-        if (month != "" && year != 0) {
-            let curMonth = new Date(month + "1, " + year.toString())
+        if (miniMonth != "" && year != 0) {
+            let curMonth = new Date(miniMonth + "1, " + year.toString())
             setMonthStart(curMonth.getDay());
         }
     })
@@ -60,7 +69,7 @@ export const MonthProvider = ({children}) => {
 
 
     return (
-        <MonthContext.Provider value={{date, month, year, dayNum, day, monthStart, offset}}>
+        <MonthContext.Provider value={{date, month, year, dayNum, day, monthStart, offset, miniMonth}}>
             {children}
         </MonthContext.Provider>
     )

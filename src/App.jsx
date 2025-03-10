@@ -8,23 +8,26 @@ import RightDiv from './components/RightDiv.jsx'
 import AddEvent from './components/AddEvent.jsx';
 import { MonthProvider } from './contexts/MonthContext.jsx';
 import { SelectedProvider } from './contexts/SelectedContext.jsx';
+import { OffSetProvider } from './contexts/OffSetContext.jsx';
 
 function App() {
   const [globalOffset, setGlobalOffset] = useState(0);
   
   return (
-    <MonthProvider>
-      <SelectedProvider>
-        <div>
-          <Header></Header>
-        </div>
-        <div className="content">
-          <LeftDiv></LeftDiv>
-          <MainCalendar offset={globalOffset}></MainCalendar>
-          <RightDiv></RightDiv>
-        </div>
-      </SelectedProvider>
-    </MonthProvider>
+    <OffSetProvider>
+      <MonthProvider>
+        <SelectedProvider>
+          <div>
+            <Header></Header>
+          </div>
+          <div className="content">
+            <LeftDiv></LeftDiv>
+            <MainCalendar offset={globalOffset}></MainCalendar>
+            <RightDiv></RightDiv>
+          </div>        
+        </SelectedProvider>
+      </MonthProvider>
+    </OffSetProvider>
   )
 }
 
