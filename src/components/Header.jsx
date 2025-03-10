@@ -16,11 +16,21 @@ import dots from '../assets/dots.webp';
 import profile from '../assets/profile.png';
 
 import { MonthContext } from '../contexts/MonthContext';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 const Header = () => {
 
     const {month} = useContext(MonthContext);
     const {year} = useContext(MonthContext);
+    const [offset, setOffset] = useState(0);
+
+    const calcOffSet = (direction) => {
+        console.log("pressed")
+        if (direction = "prev") {
+            setOffset(offset -7)
+        } else if (direction = "next") {
+            setOffset(offset + 7)
+        }
+    }
     return (
         <div className={styles["container"]}>
             <div className={styles["leftSection"]}>
@@ -28,8 +38,8 @@ const Header = () => {
                 <img src={Logo} className={styles["logo"]} />
                 <h3 className={styles["calText"]}> Calendar </h3>
                 <button className={styles["todayButton"]}> Today </button>
-                <img src={LeftArrow}  className={styles["leftArrow"]}/>
-                <img src={RightArrow} className={styles["rightArrow"]}/>
+                <button onClick={() => calcOffSet("prev")} className={styles["arrowButtons"]}><img src={LeftArrow}  className={styles["leftArrow"]} /></button>
+                <button onClick={() => calcOffSet("next")} className={styles["arrowButtons"]}> <img src={RightArrow} className={styles["rightArrow"]} /> </button>
                 <button className={styles["monthButton"]}> {month} {year} <img src={downArrow} className={styles["downArrow"]} /> </button> {/* need to make this an imported value */}
             </div>
             <div className={styles["break"]}>
@@ -45,10 +55,8 @@ const Header = () => {
                 <button className={styles["dots"]}><img src={dots} className={styles["dotsImg"]} /></button>
                 <button className={styles["profile"]}><img src={profile} className={styles["profileImg"]} /></button>  
             </div>
-            
-            
-           
         </div>
     )
 }
 export default Header;
+export offset;

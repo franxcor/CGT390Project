@@ -4,17 +4,18 @@ export const SelectedContext = createContext();
 
 export const SelectedProvider = ({children}) => {
     const [startDate, setStartDate] = useState(0);
-    const [startDateMini, setStartDateMini] = useState(0)
 
-    const {dayNum, date} = useContext(MonthContext);
-
+    const {dayNum, date, month} = useContext(MonthContext);
 
     useEffect(() => {
         if (dayNum !== undefined && date !== undefined) {
             setStartDate(date - dayNum);
-            console.log(date, dayNum)
+            console.log(date, dayNum);
+            
+
         }
     }, [date, dayNum]);
+
     
 
     return (

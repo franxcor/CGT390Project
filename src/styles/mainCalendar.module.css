@@ -30,6 +30,17 @@
     margin: 0px;
 }
 
+.numDaySelected { 
+    font-size: 20pt;
+    font-weight: normal;
+    padding: 0px;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin: 0px;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 25px;
+}
 .body {
     display: flex;
 }

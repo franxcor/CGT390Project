@@ -23,6 +23,11 @@
     margin-left: 23px;
 }
 
+.arrowButtons {
+    background-color: #f8fafd;
+    border: none;
+}
+
 .logo {
     height: 35px; 
     margin-top: 17px;

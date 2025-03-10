@@ -5,9 +5,13 @@ import styles from '../styles/leftDiv.module.css'
 
 import MiniCalendar from './MiniCalendar'
 const LeftDiv = () => {
+
+    const handleCreateEvent = () => {
+        console.log("create button clicked")
+    }
     return (
         <div className={styles["container"]}>
-            <button className={styles["createButton"]}>
+            <button className={styles["createButton"]} onClick={handleCreateEvent}>
                 <img className={styles["createButtonPlus"]} src={plus}/>Create
                 <img src={DownArrow} className={styles["createButtonDown"]}/>
             </button>
