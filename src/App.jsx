@@ -9,6 +9,7 @@ import AddEvent from './components/AddEvent.jsx';
 import { MonthProvider } from './contexts/MonthContext.jsx';
 import { SelectedProvider } from './contexts/SelectedContext.jsx';
 import { OffSetProvider } from './contexts/OffSetContext.jsx';
+import { AddEventProvider } from './contexts/addEventContext.jsx';
 
 function App() {
   const [globalOffset, setGlobalOffset] = useState(0);
@@ -17,14 +18,16 @@ function App() {
     <OffSetProvider>
       <MonthProvider>
         <SelectedProvider>
-          <div>
-            <Header></Header>
-          </div>
-          <div className="content">
-            <LeftDiv></LeftDiv>
-            <MainCalendar offset={globalOffset}></MainCalendar>
-            <RightDiv></RightDiv>
-          </div>        
+          <AddEventProvider>
+            <div>
+              <Header></Header>
+            </div>
+            <div className="content">
+              <LeftDiv></LeftDiv>
+              <MainCalendar offset={globalOffset}></MainCalendar>
+              <RightDiv></RightDiv>
+            </div>     
+          </AddEventProvider>   
         </SelectedProvider>
       </MonthProvider>
     </OffSetProvider>

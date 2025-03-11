@@ -1,4 +1,4 @@
-import {useContext} from 'react'
+import {useContext, useEffect} from 'react'
 
 import styles from '../styles/mainCalendar.module.css';
 import EventBlock from './EventBlock';
@@ -7,15 +7,14 @@ import AddEvent from './AddEvent';
 import { SelectedContext } from '../contexts/SelectedContext.jsx';
 import { MonthContext } from '../contexts/MonthContext.jsx';
 import { OffSetContext } from '../contexts/OffSetContext.jsx';
+import { AddEventContext } from '../contexts/addEventContext.jsx';
 
 const MainCalendar = ({}) => {
     const {startDate} = useContext(SelectedContext);
     const {date} = useContext(MonthContext);
     const {offSet} = useContext(OffSetContext);
+    const {eventOpen} = useContext(AddEventContext);
 
-    const handleCreateEvent = (startTime, day) => {
-        console.log(startTime, day)
-    }
     
     return (
         <div className={styles.content}>
@@ -51,11 +50,13 @@ const MainCalendar = ({}) => {
                 </div>
             </div>
             <div className={styles.body}>
+            {eventOpen && <AddEvent></AddEvent>}
                 <table>
                     <thead>
                         <tr >
                             <td className={styles.timeZone}>GMT-05</td>
                         </tr>
+                        
                     </thead>
                     <tbody>
                         <tr className={styles.blockRow}>
@@ -200,10 +201,11 @@ const MainCalendar = ({}) => {
                         </tr>
                         <tr>
                             <td className={styles.times}>3 PM</td>
+                            <td className={styles.hourBlock}><EventBlock length={'120px'} title={'CGT 390'} startTime={'3:30pm'} endTime={"5:30pm"}></EventBlock></td>
+                            
                             <td className={styles.hourBlock}></td>
                             <td className={styles.hourBlock}></td>
-                            <td className={styles.hourBlock}></td>
-                            <td className={styles.hourBlock}></td>
+                            <td className={styles.hourBlock}><EventBlock length={'120px'} title={'CGT 390'} startTime={'3:30pm'} endTime={"5:30pm"}></EventBlock></td>
                             <td className={styles.hourBlock}></td>
                             <td className={styles.hourBlock}></td>
                             <td className={styles.hourBlock}></td>

@@ -4,10 +4,13 @@ import plus from '../assets/plus.webp'
 import styles from '../styles/leftDiv.module.css'
 
 import MiniCalendar from './MiniCalendar'
+import { AddEventContext } from '../contexts/addEventContext'
+import { useContext } from 'react'
 const LeftDiv = () => {
+    const {setEventOpen} = useContext(AddEventContext);
 
     const handleCreateEvent = () => {
-        console.log("create button clicked")
+        setEventOpen(true);
     }
     return (
         <div className={styles["container"]}>

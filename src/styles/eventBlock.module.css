@@ -3,6 +3,7 @@
     width: 70px;
     background-color:orchid;
     padding: 5px;
+    position: absolute;
 }
 .title {
     color: black;
